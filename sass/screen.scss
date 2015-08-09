@@ -1,0 +1,297 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+// font size
+$smalltext:12px;
+$mediumsmalltext:16px;
+$mediumtext:24px;
+$mediumlargetext:36px;
+$largetext:48px;
+// colors
+$white:#fff;
+$bluetransparent: rgba(35,62,153,0.2);
+$blue: #233e99;
+$orange: #eda032;
+$green:#6db33f;
+// fonts
+$oswald: 'Oswald', sans-serif;
+$Roboto: 'Roboto Condensed', sans-serif;
+
+p{
+	font-family: $Roboto
+
+}
+nav{
+	width:100%;
+	height:110px;
+	
+	.nav-logo{
+		height:104px;
+		width:278px;
+		background-image: url('../img/el_logo_mgc_2c.png');
+		background-repeat:no-repeat;
+		content:"Maris Grove";
+		text-indent:279px;
+		overflow: hidden;
+		background-size:contain;
+		position:relative;
+		top:10px;
+	}
+	.nav-logo, p{
+		display: inline-block;
+		
+	}
+	p{
+		position:relative;
+		font-size:$mediumtext;
+		top:35px;
+		font-family: $Roboto;
+		color:grey;
+	}
+}
+.masthead{
+	height:800px;
+	width:100%;
+	background-image: url('../img/mgc_june_paterson_6_2013_1846-0229_ph.jpg');
+	background-size:cover;
+	h1{
+		color: $white;
+		font-size: $largetext;
+		opacity:100;
+		font-family: $oswald;
+		font-weight: 700;
+		text-shadow: 0 2px #222;
+	}
+	.tagline{
+		padding-top:100px;
+		background: $bluetransparent;
+		width:390px;
+		h1{
+			line-height: 60px;	
+		}
+		
+	}
+}
+main{
+	hr{
+		width:600px
+	}
+	h2{
+		font-size: $mediumtext;
+		font-family: $oswald;
+		font-weight: 400;
+		margin: 50px 0;
+
+	}
+	p{
+		font-size:$mediumsmalltext;
+		&.fact-small-print{
+			font-size: $smalltext;
+		}
+	}
+	.fact{
+		text-decoration: underline;
+		text-transform: uppercase;
+		color:$green;
+		font-size: $mediumtext;
+		display:inline-block;
+		font-family: $oswald;
+		font-weight: 700;
+		margin-right: 25px;
+	}
+	h3{
+		display:inline-block;
+		width:80%;
+		color:$blue;
+		font-size:$mediumsmalltext;
+	}
+}
+.banner{
+	background:$blue;
+	color:$white;
+	font-family: $Roboto;
+	font-weight: 400;
+	.fa-10x{
+	font-size:10em ;
+	text-align: center;
+	position:relative;
+	top:15px;
+	left:15px;
+	}
+	.fact-banner{
+		text-decoration: underline;
+		text-transform: uppercase;
+		font-family: $oswald;
+		font-weight: 700;
+		color:$orange;
+	}
+	.call{
+		font-weight: 300;
+		font-style: italic;
+	}
+	a{
+		color:white;
+		&:hover{
+			color:$orange;
+			text-decoration: none;
+		}
+		.number{
+			font-weight: 700;
+		}
+	}
+}
+input, select, label{
+	display: block;
+	width:100%;
+	font-size: $mediumsmalltext;
+	font-family: $Roboto !important; 
+	padding:5px;
+	border-radius: 2px;
+	border:none;
+}
+.form{
+	background:$green;
+	padding:20px;
+	padding-bottom:40px;
+	position: relative;
+	top:-275px;
+	margin-bottom:-150px;
+	.error{
+		background:#f2dede;
+	}
+	h2{
+		font-size: $mediumlargetext;
+		color:$white;
+		font-family: $Roboto;
+		font-weight: 700;
+		margin: 10px 0;
+	}
+	select{
+		height:36px;
+	}
+	label{
+		color:$white;
+	}
+	.checkbox, .checkbox-label{
+		display:inline-block;
+		color:$white;
+	}
+	.checkbox{
+		width:10px;
+	}
+	.checkbox-label{
+		width:200px
+	}
+	.submit{
+		font-size:$mediumsmalltext;
+		font-family: $Roboto;
+		background: $orange;
+		padding:15px;
+		border:none;
+		margin-top:10px;
+		color:$white;
+		
+	}
+	.email{
+		margin-bottom:20px;
+	}
+	.inquiry{
+		margin-bottom:10px;
+	}
+}
+footer{
+	padding:50px;
+	.address-tel{
+		a{
+			color:black;
+		}
+	}
+	.housing::before{
+		content:" ";
+		position:absolute;
+		background-image: url('../img/eho.png');
+		width:28px;
+		height:22px;
+	    left: -11px;
+    	top: -5px;
+	}
+	.links{
+		position: relative;
+		left:28px;
+	}
+	.bold{
+		font-weight: 700;
+
+	}
+	.middot{
+		margin:0 16px;
+	}
+	p{
+		display:inline-block
+	}
+	li{
+		display:inline;
+		a{
+			color:$blue;
+			font-weight: 700;
+			
+		}
+	}
+	.copyright{
+		font-style: italic;
+		color:grey;
+		font-size: $smalltext;
+	}
+}
+.youtube{
+	color:red;
+}
+.facebook{
+	color:$blue;
+}
+@media (max-width:1200px) and (min-width:992px){
+	main{
+		.form{
+			width:320px;
+		}
+	}
+	
+	footer{
+		.youtube, .facebook{
+			display: none;
+		}
+	}
+}
+@media (max-width:992px){
+	.form{
+		top:0;
+		margin-bottom:30px;
+	}
+	.masthead{
+		height:600px;
+
+		.tagline{
+			padding-top:5px;
+			position:relative;
+			top:250px;
+			width:750px;
+		}
+	}
+	main{
+		.fact{
+			display:block;
+		}
+	}
+	footer{
+		.youtube, .facebook{
+			display: none;
+		}
+	}
+}
+.danger{
+	color:red !important;
+	font-family:$Roboto;
+}
